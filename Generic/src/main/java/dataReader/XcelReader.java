@@ -11,11 +11,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class XcelReader {
-    public static String Path = "/Users/junedalam/Documents/July2018WebAutomation/Expedia/src/test/java/Tests/DataDrivenTests/ExpediaTestData.xls";
+
+    public static String Path = "C:\\Users\\emdad\\IdeaProjects\\hiframework\\HDepot\\src\\test\\java\\dataDriventest\\Book1.Excel.xls";
     static Workbook book;
     static Sheet sheet;
 
-    public static Object[][] getTestData(int sheetIndex){
+    public static Object[][] getData(int sheetIndex){
         FileInputStream file = null;
         BufferedInputStream bis = null;
         try {
