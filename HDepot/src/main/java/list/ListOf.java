@@ -57,32 +57,32 @@ public class ListOf extends CommonAPI {
 
 
     //T3HOM_FP_TC01 Verify 'Check Order Status'
-    public static boolean verifyCheckOrderStatus() {
+    public boolean verifyCheckOrderStatus() {
         Boolean dis = orderStatusLink.isDisplayed();
 
         return dis;
     }
 
     //T3HOM_FP_TC02 verify 'Pay Credit card' link
-    public static boolean verifyPayCreditCard() {
+    public boolean verifyPayCreditCard() {
         Boolean dis = payCreditCardLink.isDisplayed();
         return dis;
     }
 
     //T3HOM_FP_TC03 verify 'Order Cancellation' link
-    public static boolean verifyOrderCancellation() {
+    public boolean verifyOrderCancellation() {
         Boolean dis = orderCancellationLink.isDisplayed();
         return dis;
     }
 
     //T3HOM_FP_TC04 verify 'Returns' link
-    public static boolean verifyReturns() {
+    public boolean verifyReturns() {
         Boolean dis = returnsLink.isDisplayed();
         return dis;
     }
 
     //T3HOM_FP_TC05 verify 'Special & Offers' link
-    public static boolean verifySpecialOffers() {
+    public boolean verifySpecialOffers() {
         Boolean dis = specialsOffersLink.isDisplayed();
         return dis;
     }
@@ -129,6 +129,44 @@ public class ListOf extends CommonAPI {
         return dis;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //T3HOM_FP_TC13 click on 'Home Depot Canada' link and get title of the page
         /*public static String goToHomeDepotCanada(){
             String parentWindowHandle = driver.getWindowHandle(); //get parent window handle

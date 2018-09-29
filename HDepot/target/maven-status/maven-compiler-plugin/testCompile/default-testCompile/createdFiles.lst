@@ -1,2 +1,7 @@
-base\HomeTest.class
+seriesOftest\ListOfTest.class
+prohometest\Protest.class
+testSearch\CreditCardTest.class
+testCases\GoogleSheetPageTest.class
+testSearch\TestSearch.class
 datatest\XcelReaderTest.class
+base\HomeTest.class

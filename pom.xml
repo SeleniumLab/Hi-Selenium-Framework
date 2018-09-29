@@ -129,6 +129,16 @@
                 <artifactId>openxml4j</artifactId>
                 <version>1.0-beta</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.oauth-client</groupId>
+                <artifactId>google-oauth-client-jetty</artifactId>
+                <version>1.23.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.apis</groupId>
+                <artifactId>google-api-services-sheets</artifactId>
+                <version>v4-rev498-1.23.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

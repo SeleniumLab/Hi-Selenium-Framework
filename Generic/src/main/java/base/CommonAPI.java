@@ -36,6 +36,10 @@ import java.util.concurrent.TimeUnit;
 public class CommonAPI {
     public WebDriver driver = null;
 
+    public static void convertToString(String name) {
+    }
+
+
     @BeforeMethod
     public void setUp() throws InterruptedException {
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\emdad\\IdeaProjects\\hiframework\\Generic\\driver\\geckodriver.exe");

@@ -1,7 +1,6 @@
 package datatest;
 
 
-
 import base.Home;
 import base.XcelElement;
 import org.openqa.selenium.support.PageFactory;
@@ -27,8 +26,9 @@ public class XcelReaderTest extends XcelElement {
         objExcelFile = PageFactory.initElements(driver, XcelReaderTest.class);
         xcelElement = PageFactory.initElements(driver, XcelElement.class);
     }
+
     @DataProvider
-    public Iterator<Object[]> supplyDataExcel(){
+    public Iterator<Object[]> supplyDataExcel() {
         ArrayList<Object[]> testDataExcel = XlsDataReaderUtil.getDataFromExcel();
         return testDataExcel.iterator();
     }

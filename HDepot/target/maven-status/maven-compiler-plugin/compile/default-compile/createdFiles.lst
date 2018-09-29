@@ -1,6 +1,6 @@
-dataRead\GoogleSheetR.class
+base\XcelElement.class
+dataRead\GoogleSheetPage.class
 list\ListOf.class
-dataRead\XcelReader.class
 keyworddriven\Features.class
 searchpage\DataReader.class
 base\Home.class

@@ -1,11 +1,12 @@
 package reporting;
 
+import base.CommonAPI;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 
-public class TestLogger {
+public class TestLogger extends CommonAPI {
 
         public static void log(final String message){
             Reporter.log(message,true);
