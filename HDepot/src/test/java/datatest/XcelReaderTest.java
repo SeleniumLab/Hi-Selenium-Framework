@@ -1,32 +1,44 @@
 package datatest;
 
 
-import base.CommonAPI;
+
 import base.Home;
-import dataReader.XcelReader;
+import base.XcelElement;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import utilities.XlsDataReaderUtil;
 
-public class XcelReaderTest extends CommonAPI {
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-    Home home;
+public class XcelReaderTest extends XcelElement {
+
+
+    XcelReaderTest objExcelFile;
+    XcelElement xcelElement;
 
     @BeforeMethod
-    public void createTestObj() {
-        this.home = new Home();
-    }
+    public void initializePageObject() {
 
+        objExcelFile = PageFactory.initElements(driver, XcelReaderTest.class);
+        xcelElement = PageFactory.initElements(driver, XcelElement.class);
+    }
     @DataProvider
-    public Object[][] getExcelTestData() {
-        Object data[][] = XcelReader.getData(0);
-        return data;
+    public Iterator<Object[]> supplyDataExcel(){
+        ArrayList<Object[]> testDataExcel = XlsDataReaderUtil.getDataFromExcel();
+        return testDataExcel.iterator();
     }
 
-    @Test(dataProvider = "getExcelTestData")
-    public void logintest(String email, String password) throws InterruptedException {
-        home.myAccount(email, password);
+    @Test(priority = 5, dataProvider = "supplyDataExcel")
+    public void loginTestWithDataProvider(String items) throws InterruptedException {
+
+        //objExcelFile.xcelElement.signInByDataProvider(items);
+        String actual = XcelElement.getXcelElement.getText();
+        //TestLogger.log("In Sign In Page");
+        //Assert.assertEquals(actual,message);
     }
-
-
 }

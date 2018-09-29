@@ -11,7 +11,7 @@ public class HomeTest extends Home {
     }
 
     @Test
-    public void myAccount() {
-        super.myAccount();
+    public void myAccount(String email) {
+        super.myAccount(email);
     }
 }

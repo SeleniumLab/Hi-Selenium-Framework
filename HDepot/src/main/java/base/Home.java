@@ -73,13 +73,19 @@ public class Home extends CommonAPI {
 
 
 
-    public void myAccount() {
+    public void myAccount(String email) {
 
         driver.findElement(By.cssSelector("#headerMyAccount .SimpleFlyout__link--bold")).click();
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 
         driver.findElement(By.xpath("//span[contains(text(),'Sign in')]")).click();
         //tabmyaccount.click();
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+
+        driver.findElement(By.xpath("//div[@class='login-popup__model']//input[@id='email_id']")).click();
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+
+        driver.findElement(By.xpath("//input[@id='password']")).click();
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
     }
 
